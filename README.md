@@ -20,3 +20,6 @@ To confirm that these values are correct, [TimeAndDate](https://www.timeanddate.
 ### Further API
 
 The [GeoServices](GeoServices) folder includes headers I reverse engineered. [GEOCelestialBody proof](GeoServices/GEOCelestialBody-proof.md) explains how I constructed the enum used to identify different celestial bodies in the Milky Way. I haven't found a reliable source to confirm sunrise and sunset times on other celestial bodies in the Milky Way, however the `GEOCelestialEphemeris` class seems to output valid values. 
+
+
+All research done for, and tested on iOS 10.2
