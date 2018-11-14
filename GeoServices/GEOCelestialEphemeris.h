@@ -29,6 +29,8 @@
 @property (nonatomic, readonly) GEOEquatorialCelestialBodyData *equatorialCoord;
 @property (nonatomic, readonly) GEOHorizontalCelestialBodyData *horizontalCoord;
 
+/* GEOCelestialBodyEarth results in garbage data, an observer on Earth cannot observe Earth */
 - (instancetype)initWithLocation:(CLLocationCoordinate2D)location date:(NSDate *)date body:(GEOCelestialBody)body;
+- (instancetype)initWithLocation:(CLLocationCoordinate2D)location date:(NSDate *)date body:(GEOCelestialBody)body useHighPrecision:(BOOL)highPrecision API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0));
 
 @end

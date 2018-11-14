@@ -9,11 +9,11 @@
 #import <Foundation/Foundation.h>
 
 typedef NS_ENUM(NSInteger, GEOCelestialBody) {
-    GEOCelestialBodyEarth,
+    GEOCelestialBodySun,
     GEOCelestialBodyMercury,
     GEOCelestialBodyVenus,
-    /* case 3 is skipped */
-    GEOCelestialBodyMoon = 4,
+    GEOCelestialBodyEarth,
+    GEOCelestialBodyMoon,
     GEOCelestialBodyMars,
     GEOCelestialBodyJupiter,
     GEOCelestialBodySaturn,

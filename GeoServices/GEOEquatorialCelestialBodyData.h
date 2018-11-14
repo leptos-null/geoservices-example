@@ -16,5 +16,6 @@
 @property (nonatomic, readonly) double declination;
 
 - (instancetype)initWithDate:(NSDate *)date body:(GEOCelestialBody)body;
+- (instancetype)initWithDate:(NSDate *)date body:(GEOCelestialBody)body useHighPrecision:(BOOL)highPrecision API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0));
 
 @end

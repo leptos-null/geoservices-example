@@ -20,7 +20,7 @@ int main() {
     iPhoneAnnouncementDateComponents.timeZone = appleParkTimeZone;
     
     assert(iPhoneAnnouncementDateComponents.validDate);
-    GEOCelestialEphemeris *celestialEphemeris = [[GEOCelestialEphemeris alloc] initWithLocation:appleParkCoordinates date:iPhoneAnnouncementDateComponents.date body:GEOCelestialBodyEarth];
+    GEOCelestialEphemeris *celestialEphemeris = [[GEOCelestialEphemeris alloc] initWithLocation:appleParkCoordinates date:iPhoneAnnouncementDateComponents.date body:GEOCelestialBodySun];
     
     NSDateFormatter *dateFormatter = [NSDateFormatter new];
     dateFormatter.timeStyle = NSDateFormatterShortStyle;
@@ -30,8 +30,8 @@ int main() {
     /* output:
      Sunrise: Sep 12, 2017, 6:47 AM
      Sunset: Sep 11, 2017, 7:21 PM
-
-     * confirm: https://www.timeanddate.com/sun/@37.3331,-122.011?month=9&year=2017
+     
+     * confirm: https://www.timeanddate.com/sun/@37.3331,-122.0111?month=9&year=2017
      */
     printf("Sunrise: %s\n"
            "Sunset: %s\n",
