@@ -12,15 +12,15 @@ int main() {
     CLLocationCoordinate2D appleParkCoordinates = CLLocationCoordinate2DMake(+37.3330541, -122.0110933);
     NSTimeZone *appleParkTimeZone = [NSTimeZone timeZoneWithName:@"America/Los_Angeles"];
     
-    NSDateComponents *iPhoneAnnouncementDateComponents = [NSDateComponents new];
-    iPhoneAnnouncementDateComponents.calendar = [NSCalendar calendarWithIdentifier:NSCalendarIdentifierGregorian];
-    iPhoneAnnouncementDateComponents.day = 12;
-    iPhoneAnnouncementDateComponents.month = 9;
-    iPhoneAnnouncementDateComponents.year = 2017;
-    iPhoneAnnouncementDateComponents.timeZone = appleParkTimeZone;
+    NSDateComponents *dateComponents = [NSDateComponents new];
+    dateComponents.calendar = [NSCalendar calendarWithIdentifier:NSCalendarIdentifierGregorian];
+    dateComponents.day = 12;
+    dateComponents.month = 9;
+    dateComponents.year = 2017;
+    dateComponents.timeZone = appleParkTimeZone;
     
-    assert(iPhoneAnnouncementDateComponents.validDate);
-    GEOCelestialEphemeris *celestialEphemeris = [[GEOCelestialEphemeris alloc] initWithLocation:appleParkCoordinates date:iPhoneAnnouncementDateComponents.date body:GEOCelestialBodySun];
+    assert(dateComponents.validDate);
+    GEOCelestialEphemeris *celestialEphemeris = [[GEOCelestialEphemeris alloc] initWithLocation:appleParkCoordinates date:dateComponents.date body:GEOCelestialBodySun];
     
     NSDateFormatter *dateFormatter = [NSDateFormatter new];
     dateFormatter.timeStyle = NSDateFormatterShortStyle;
